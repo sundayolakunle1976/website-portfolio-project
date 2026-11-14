@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Defines the character encoding used by the website -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the website responsive on mobile phones, tablets and desktops -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Sets the title displayed on the browser tab -->
+    <title>Academic Planner | Olusegun Sunday Olakunle</title>
+
+    <!-- Connects the external CSS file responsible for website styling -->
+    <!-- ../ means move one directory level backwards to access the assets folder -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+
+<body>
+
+
+    <!-- ==========================================
+         HEADER SECTION: LOGO AND NAVIGATION MENU
+         ========================================== -->
+    <header class="site-header">
+
+        <!-- Website logo; clicking it takes visitors to the homepage -->
+        <a class="brand" href="../index.html">
+            OS<span>.</span>
+        </a>
+
+        <!-- Mobile navigation toggle button -->
+        <button
+            class="menu-toggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false">
+
+            ☰
+
+        </button>
+
+        <!-- Main navigation menu connecting all website pages -->
+        <nav class="nav">
+
+            <a href="../index.html">Home</a>
+
+            <a href="../about/index.html">About Me</a>
+
+            <a href="../projects/index.html">Projects</a>
+
+            <!-- active class highlights the current Academic Planner page -->
+            <a class="active" href="index.html">
+                Academic Planner
+            </a>
+
+            <a href="../contact/index.html">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ==========================================
+         MAIN SECTION: ACADEMIC PLANNER CONTENT
+         ========================================== -->
+    <!--
+        container: applies the main website content width and alignment.
+        page: applies the general page layout.
+        narrow: restricts the content width for a focused planner layout.
+    -->
+    <main class="container page narrow">
+
+        <!-- Small introductory label displayed above the main heading -->
+        <p class="eyebrow">
+            STAY ORGANISED
+        </p>
+
+        <!-- Main heading of the Academic Planner page -->
+        <h1>
+            Academic <span>Planner</span>
+        </h1>
+
+        <!-- Brief explanation of what users can do with the planner -->
+        <p class="lead">
+            Add tasks, mark them complete and remove tasks
+            when they are no longer needed.
+        </p>
+
+
+        <!-- ==========================================
+             PLANNER SECTION: TASK MANAGEMENT AREA
+             ========================================== -->
+        <section class="planner-card">
+
+
+            <!-- ==========================================
+                 SECTION 1: ADD NEW TASK FORM
+                 ========================================== -->
+            <!--
+                id="task-form" allows JavaScript to identify and
+                interact with the task submission form.
+            -->
+            <form
+                id="task-form"
+                class="task-form">
+
+
+                <!-- Label describing the task input field -->
+                <label for="task-input">
+                    New task
+                </label>
+
+
+                <!-- Groups the task input field and Add Task button together -->
+                <div class="input-row">
+
+
+                    <!-- ==========================================
+                         TASK INPUT FIELD
+                         ========================================== -->
+                    <!--
+                        Accepts a new academic task from the user.
+
+                        id="task-input":
+                        Allows JavaScript to identify the input field.
+
+                        type="text":
+                        Allows users to enter text.
+
+                        placeholder:
+                        Displays an example task before the user starts typing.
+
+                        maxlength="120":
+                        Limits the task description to 120 characters.
+
+                        required:
+                        Prevents the submission of an empty task.
+                    -->
+                    <input
+                        id="task-input"
+                        type="text"
+                        placeholder="e.g. Prepare project presentation"
+                        maxlength="120"
+                        required>
+
+
+                    <!-- ==========================================
+                         ADD TASK BUTTON
+                         ========================================== -->
+                    <!--
+                        Clicking this button submits the task form.
+
+                        type="submit" triggers the form submission event.
+                        class="btn" applies the website's button styling.
+                    -->
+                    <button
+                        class="btn"
+                        type="submit">
+
+                        Add task
+
+                    </button>
+
+
+                </div>
+
+            </form>
+
+
+            <!-- ==========================================
+                 SECTION 2: TASK COUNTER AND CLEAR BUTTON
+                 ========================================== -->
+            <div class="planner-meta">
+
+
+                <!--
+                    Displays the total number of tasks and completed tasks.
+
+                    JavaScript updates this element whenever a task
+                    is added, completed or deleted.
+                -->
+                <span id="task-count">
+                    0 tasks
+                </span>
+
+
+                <!--
+                    Removes all completed tasks from the planner.
+
+                    id="clear-completed" allows JavaScript to identify
+                    the button and attach a click event to it.
+
+                    type="button" prevents it from submitting the form.
+                -->
+                <button
+                    id="clear-completed"
+                    class="text-button"
+                    type="button">
+
+                    Clear completed
+
+                </button>
+
+
+            </div>
+
+
+            <!-- ==========================================
+                 SECTION 3: TASK LIST DISPLAY AREA
+                 ========================================== -->
+            <!--
+                This unordered list displays all tasks added by the user.
+
+                id="task-list":
+                Allows JavaScript to dynamically create and display tasks.
+
+                class="task-list":
+                Connects the list to its CSS styling.
+
+                aria-live="polite":
+                Helps screen readers announce changes to the task list.
+            -->
+            <ul
+                id="task-list"
+                class="task-list"
+                aria-live="polite">
+            </ul>
+
+
+            <!-- ==========================================
+                 SECTION 4: EMPTY TASK MESSAGE
+                 ========================================== -->
+            <!--
+                Displays a message when there are no tasks in the planner.
+
+                The JavaScript controls the hidden property:
+                - When tasks are empty, the message is displayed.
+                - When tasks exist, the message is hidden.
+            -->
+            <p
+                id="empty-state"
+                class="empty-state">
+
+                No tasks yet. Add your first academic task above.
+
+            </p>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- ==========================================
+         FOOTER SECTION: COPYRIGHT AND PAGE DETAILS
+         ========================================== -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <!-- Copyright information; JavaScript automatically updates the year -->
+            <span>
+                © <span class="year"></span> Olusegun Sunday Olakunle
+            </span>
+
+            <!-- Identifies the current website page -->
+            <span>
+                Academic Planner
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ==========================================
+         JAVASCRIPT FILE CONNECTIONS
+         ========================================== -->
+
+    <!--
+        Loads main.js.
+
+        This file handles:
+        1. Mobile navigation menu functionality.
+        2. Automatic copyright year updates.
+    -->
+    <script src="../assets/js/main.js"></script>
+
+
+    <!--
+        Loads planner.js.
+
+        This file handles the academic task management functionality:
+        1. Adding new tasks.
+        2. Displaying tasks.
+        3. Marking tasks as completed.
+        4. Deleting individual tasks.
+        5. Clearing all completed tasks.
+        6. Updating the task counter.
+        7. Displaying the empty-state message.
+    -->
+    <script src="../assets/js/planner.js"></script>
+
+</body>
+</html>

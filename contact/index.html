@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Defines the character encoding used by the website -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the website responsive on mobile phones, tablets and desktops -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Sets the title displayed on the browser tab -->
+    <title>Contact | Olusegun Sunday Olakunle</title>
+
+    <!-- Connects the external CSS file responsible for website styling -->
+    <!-- ../ means move one directory level backwards to access the assets folder -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+
+<body>
+
+
+    <!-- ==========================================
+         HEADER SECTION: LOGO AND NAVIGATION MENU
+         ========================================== -->
+    <header class="site-header">
+
+        <!-- Website logo; clicking it takes visitors to the homepage -->
+        <a class="brand" href="../index.html">
+            OS<span>.</span>
+        </a>
+
+        <!-- Mobile navigation toggle button -->
+        <button
+            class="menu-toggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false">
+
+            ☰
+
+        </button>
+
+        <!-- Main navigation menu connecting all website pages -->
+        <nav class="nav">
+
+            <a href="../index.html">Home</a>
+
+            <a href="../about/index.html">About Me</a>
+
+            <a href="../projects/index.html">Projects</a>
+
+            <a href="../planner/index.html">Academic Planner</a>
+
+            <!-- active class highlights the current Contact page -->
+            <a class="active" href="index.html">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ==========================================
+         MAIN SECTION: CONTACT PAGE CONTENT
+         ========================================== -->
+    <main class="container page">
+
+        <!-- Small introductory label displayed above the main heading -->
+        <p class="eyebrow">
+            LET'S CONNECT
+        </p>
+
+        <!-- Main heading of the Contact page -->
+        <h1>
+            Contact <span>Me</span>
+        </h1>
+
+        <!-- Brief explanation of the purpose of the contact form -->
+        <p class="lead">
+            Use the form below to send a message.
+            Required fields are validated in your browser.
+        </p>
+
+
+        <!-- ==========================================
+             CONTACT LAYOUT: INFORMATION AND FORM
+             ========================================== -->
+        <div class="contact-layout">
+
+
+            <!-- ==========================================
+                 SECTION 1: CONTACT INFORMATION
+                 ========================================== -->
+            <section class="info-card">
+
+                <!-- Heading for the contact information section -->
+                <h2>
+                    Contact information
+                </h2>
+
+                <!-- Displays the portfolio owner's full name -->
+                <p>
+                    <strong>Name</strong>
+                    <br>
+                    Olusegun Sunday Olakunle
+                </p>
+
+                <!-- Displays the available telephone numbers -->
+                <p>
+                    <strong>Phone</strong>
+                    <br>
+                    08034068485 / 08020807188
+                </p>
+
+                <!-- Displays the portfolio owner's email address -->
+                <p>
+                    <strong>Email</strong>
+                    <br>
+                    o.sunday8751@miva.edu.ng
+                </p>
+
+            </section>
+
+
+            <!-- ==========================================
+                 SECTION 2: CONTACT FORM
+                 ========================================== -->
+            <!--
+                id="contact-form" allows JavaScript to identify and
+                interact with this form.
+
+                novalidate disables the browser's automatic validation
+                so that the custom contact.js validation can be used.
+            -->
+            <form
+                id="contact-form"
+                class="contact-form"
+                novalidate>
+
+
+                <!-- ==========================================
+                     INPUT FIELD 1: NAME
+                     ========================================== -->
+
+                <!-- Label identifies the name input field -->
+                <label for="name">
+                    Name
+                </label>
+
+                <!--
+                    Accepts the visitor's full name.
+
+                    type="text" allows text input.
+                    required indicates that the field must be completed.
+                    id="name" connects this input to its label and JavaScript.
+                -->
+                <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    required>
+
+
+                <!-- ==========================================
+                     INPUT FIELD 2: EMAIL ADDRESS
+                     ========================================== -->
+
+                <!-- Label identifies the email input field -->
+                <label for="email">
+                    Email address
+                </label>
+
+                <!--
+                    Accepts the visitor's email address.
+
+                    type="email" identifies the expected input as an email.
+                    required means the visitor must provide an email address.
+                -->
+                <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required>
+
+
+                <!-- ==========================================
+                     INPUT FIELD 3: PHONE NUMBER
+                     ========================================== -->
+
+                <!-- Label identifies the phone number input field -->
+                <label for="phone">
+                    Phone number
+                </label>
+
+                <!--
+                    Accepts the visitor's phone number.
+
+                    type="tel" identifies this as a telephone input.
+                    inputmode="numeric" encourages a numeric mobile keyboard.
+                    pattern="[0-9]+" specifies that only digits are expected.
+                    required makes the phone number compulsory.
+                -->
+                <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    inputmode="numeric"
+                    pattern="[0-9]+"
+                    required>
+
+
+                <!-- ==========================================
+                     INPUT FIELD 4: MESSAGE
+                     ========================================== -->
+
+                <!-- Label identifies the message text area -->
+                <label for="message">
+                    Message
+                </label>
+
+                <!--
+                    Allows visitors to enter a longer message.
+
+                    rows="5" specifies the initial visible height.
+                    required means the visitor cannot submit an empty message.
+                -->
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    required>
+                </textarea>
+
+
+                <!-- ==========================================
+                     FORM SUBMISSION BUTTON
+                     ========================================== -->
+
+                <!--
+                    Clicking this button submits the form to the
+                    JavaScript validation function.
+
+                    type="submit" triggers the form's submit event.
+                    class="btn" applies the website's button styling.
+                -->
+                <button
+                    class="btn"
+                    type="submit">
+
+                    Validate message
+
+                </button>
+
+
+                <!-- ==========================================
+                     VALIDATION FEEDBACK AREA
+                     ========================================== -->
+
+                <!--
+                    JavaScript displays success or error messages here.
+
+                    aria-live="polite" helps screen readers announce
+                    changes to this feedback area.
+                -->
+                <p
+                    id="form-feedback"
+                    class="form-feedback"
+                    aria-live="polite">
+                </p>
+
+
+                <!-- ==========================================
+                     FORM DISCLAIMER
+                     ========================================== -->
+
+                <!-- Explains the limitation of the demonstration contact form -->
+                <p class="form-note">
+                    Demo form: it validates the entries but does not
+                    send email because no backend service was specified.
+                </p>
+
+
+            </form>
+
+        </div>
+
+    </main>
+
+
+    <!-- ==========================================
+         FOOTER SECTION: COPYRIGHT AND PAGE DETAILS
+         ========================================== -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <!-- Copyright information; JavaScript automatically updates the year -->
+            <span>
+                © <span class="year"></span> Olusegun Sunday Olakunle
+            </span>
+
+            <!-- Identifies the current website page -->
+            <span>
+                Contact
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ==========================================
+         JAVASCRIPT FILE CONNECTIONS
+         ========================================== -->
+
+    <!--
+        Loads main.js.
+
+        This file controls the mobile navigation menu
+        and automatically updates the copyright year.
+    -->
+    <script src="../assets/js/main.js"></script>
+
+
+    <!--
+        Loads contact.js.
+
+        This file handles contact form validation,
+        checks required fields and displays feedback messages.
+    -->
+    <script src="../assets/js/contact.js"></script>
+
+</body>
+</html>

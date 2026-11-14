@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Defines the character encoding for the website -->
+    <meta charset="UTF-8">
+
+    <!-- Ensures the website displays correctly on mobile devices and desktops -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Sets the browser tab title -->
+    <title>Projects | Olusegun Sunday Olakunle</title>
+
+    <!-- Links the external CSS file for website styling -->
+    <!-- ../ means move one folder level up to access the assets directory -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================================
+         HEADER SECTION: LOGO AND NAVIGATION MENU
+         ========================================== -->
+    <header class="site-header">
+
+        <!-- Website logo; clicking it returns visitors to the homepage -->
+        <a class="brand" href="../index.html">
+            OS<span>.</span>
+        </a>
+
+        <!-- Mobile navigation toggle button -->
+        <button
+            class="menu-toggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false">
+            ☰
+        </button>
+
+        <!-- Navigation menu containing links to all website pages -->
+        <nav class="nav">
+
+            <a href="../index.html">Home</a>
+
+            <a href="../about/index.html">About Me</a>
+
+            <!-- active class highlights the current Projects page -->
+            <a class="active" href="index.html">Projects</a>
+
+            <a href="../planner/index.html">Academic Planner</a>
+
+            <a href="../contact/index.html">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ==========================================
+         MAIN SECTION: PROJECT SHOWCASE
+         ========================================== -->
+    <main class="container page">
+
+        <!-- Small introductory label for the projects section -->
+        <p class="eyebrow">
+            MY WORK
+        </p>
+
+        <!-- Main heading of the Projects page -->
+        <h1>
+            Project <span>Showcase</span>
+        </h1>
+
+        <!-- Brief introduction explaining the projects displayed -->
+        <p class="lead">
+            Three sample website concepts supplied for this portfolio project.
+        </p>
+
+
+        <!-- ==========================================
+             PROJECT 01: STRINGMASTER
+             ========================================== -->
+        <article class="project-detail" id="stringmaster">
+
+            <!-- Displays the StringMaster project screenshot -->
+            <img
+                src="../assets/images/stringmaster.jpg"
+                alt="StringMaster website screenshot">
+
+            <!-- Contains the project title, category and description -->
+            <div>
+
+                <!-- Identifies this as the first project -->
+                <span class="tag">
+                    Project 01
+                </span>
+
+                <!-- Project name -->
+                <h2>
+                    StringMaster
+                </h2>
+
+                <!-- Explains the purpose and features of StringMaster -->
+                <p>
+                    StringMaster is a modern, interactive guitar-learning
+                    platform designed for online educators and guitar
+                    lesson services. It includes an interactive fretboard
+                    where visitors can click to play notes, explore chord
+                    shapes and hear synthesised guitar sounds.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- ==========================================
+             PROJECT 02: AURUM GOLD
+             ========================================== -->
+        <article class="project-detail" id="aurum">
+
+            <!-- Displays the Aurum Gold project screenshot -->
+            <img
+                src="../assets/images/aurum-gold.png"
+                alt="Aurum Gold screenshot placeholder">
+
+            <!-- Contains the project information -->
+            <div>
+
+                <!-- Identifies this as the second project -->
+                <span class="tag">
+                    Project 02
+                </span>
+
+                <!-- Project name -->
+                <h2>
+                    Aurum Gold
+                </h2>
+
+                <!-- Describes the business concept and website features -->
+                <p>
+                    Aurum Gold is described as a luxurious website platform
+                    for investment companies, gold bullion dealers and
+                    precious-metals financial services. It features gold
+                    accents, product displays, price-tab filtering, a
+                    slider and a contact form, with a responsive
+                    professional layout.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- ==========================================
+             PROJECT 03: NIMSY AGRO SOLAR CONCEPT
+             ========================================== -->
+        <article class="project-detail" id="nimsy">
+
+            <!-- Displays the Nimsy Agro Solar project screenshot -->
+            <img
+                src="../assets/images/nimsy-agro.jpg"
+                alt="Nimsy Agro website screenshot">
+
+            <!-- Contains the project title, description and external link -->
+            <div>
+
+                <!-- Identifies this as the third project -->
+                <span class="tag">
+                    Project 03
+                </span>
+
+                <!-- Project name -->
+                <h2>
+                    Nimsy Agro Solar Concept
+                </h2>
+
+                <!-- Explains the project's purpose and the challenges it addresses -->
+                <p>
+                    At Nimsy Agro Solar Concept, the goal is to present
+                    access to affordable clean energy that supports
+                    agricultural production. The supplied project
+                    description highlights the challenges smallholder
+                    farmers face from high fuel costs, droughts, erratic
+                    rainfall and heatwaves, and presents solar-powered
+                    irrigation and post-harvest solutions as part of
+                    the response.
+                </p>
+
+                <!-- External link to the official Nimsy Agro Solar website -->
+                <a
+                    href="https://nimsyagrosolar.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-link">
+
+                    Visit Nimsy Agro Solar Website →
+
+                </a>
+
+            </div>
+
+        </article>
+
+    </main>
+
+
+    <!-- ==========================================
+         FOOTER SECTION: COPYRIGHT AND PAGE DETAILS
+         ========================================== -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <!-- Copyright information; JavaScript automatically updates the year -->
+            <span>
+                © <span class="year"></span> Olusegun Sunday Olakunle
+            </span>
+
+            <!-- Identifies the current website section -->
+            <span>
+                Projects
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Loads the external JavaScript file for navigation and dynamic year display -->
+    <script src="../assets/js/main.js"></script>
+
+</body>
+</html>
