@@ -215,8 +215,9 @@ Run these tests in a browser and update the status after performing them.
 
 ## 6. Project Links
 
-- **Hosted website:** `[Insert published website URL]`
-- **GitHub repository:** `[Insert GitHub repository URL]`
+- **Hosted website:** [live-website](https://sundayolakunle1976.github.io/website-portfolio-project/index.html)
+
+- **GitHub repository:** [Website-repo](https://github.com/sundayolakunle1976/website-portfolio-project.git)
 
 These are left blank because no live hosting or repository links were provided.
 
